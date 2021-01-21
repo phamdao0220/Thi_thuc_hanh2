@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400px" height="400px" style="border: solid 1px"></canvas>
+<script>
+    class Circle {
+        constructor(x, y, r) {
+            this.x = x;
+            this.y = y;
+            this.radius = r;
+        }
+    }
+    function greatCrile() {
+        let ctx = document.getElementById("myCanvas").getContext('2d');
+        let circle = new Circle(10, 10, 100);
+        ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+        ctx.fill()
+        ctx.fillStyle = '#000000';
+    }
+    greatCrile();
+</script>
+</body>
+</html>
